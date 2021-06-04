@@ -12,7 +12,7 @@ public class TrabajoPracticoGrupal8Application {
 		//Karen Daiana Flores - USUARIO: KarenDay
 		//Paola Fernanda Flores - USUARIO: pao15ELF
 		//Ezequiel Estrada - USUSARIO:
-		//Juan Baysse - USUARIO:
+		//Juan Baysse - USUARIO:JuanBaysse
 	}
 
 }
