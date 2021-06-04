@@ -37,4 +37,21 @@ public interface ICompraService {
 	 */
 	public Optional<Compra> buscarPorId(Long id);
 	
+	/**
+	 * Devuelve una lista de productos que coincidan con los parametros enviados
+	 * por nombre de producto y/o monto mayor o igual al total de la compra
+	 * @param total
+	 * @param nombre
+	 * @return
+	 */
+	public List<Compra> buscarPorNombreProductoYTotal(double total, String nombre);
+	
+	/**
+	 * Devuelve una lista de productos que tengan el monto total mayor o igual al parametro
+	 * enviado
+	 * @param total
+	 * @return
+	 */
+	public List<Compra> buscarPorTotal(double total);
+	
 }
