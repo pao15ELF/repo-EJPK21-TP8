@@ -6,6 +6,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotEmpty;
 
 import org.springframework.stereotype.Component;
 
@@ -20,22 +22,26 @@ public class Producto {
 	@Column(name = "id")
 	private Long id;
 	
+	@NotEmpty(message="El ingreso de nombre es obligatorio.")
 	@Column(name = "pro_nombre" , length = 30 , nullable = false)
 	private String nombre;
 	
+	@Min(value=1 , message="El ingreso de precio es incorrecto.")
 	@Column(name = "pro_precio" , nullable = false)
 	private double precio;
 	
+	@NotEmpty(message="La marca del producto es obligatoria")
 	@Column(name = "pro_marca" , length = 20 , nullable = false)
 	private String marca;
 	
+	@Min(value=0 , message="Ingreso de stock invalido.")
 	@Column(name = "pro_stock" , nullable = false)
 	private int stock;
 	
 	public Producto() {
 	
 	}
-
+	
 	/**
 	 * @return the id
 	 */
